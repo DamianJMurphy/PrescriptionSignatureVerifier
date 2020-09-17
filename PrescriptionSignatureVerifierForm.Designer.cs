@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.sourceTextBox = new System.Windows.Forms.TextBox();
             this.browseButton = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -55,6 +57,8 @@
             this.sourceTextBox.Name = "sourceTextBox";
             this.sourceTextBox.Size = new System.Drawing.Size(632, 20);
             this.sourceTextBox.TabIndex = 1;
+            this.toolTip.SetToolTip(this.sourceTextBox, "Directory containing prescriptions or release responses for signature verificatio" +
+        "n");
             // 
             // browseButton
             // 
@@ -150,6 +154,7 @@
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 
