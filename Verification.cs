@@ -97,7 +97,7 @@ namespace PrescriptionSignatureVerifier
             }
             catch (Exception)
             {
-                result = " FAILED: Invalid or corrupt X509 certificate";
+                result = " Invalid or corrupt X509 certificate";
             }
         }
 
@@ -105,7 +105,7 @@ namespace PrescriptionSignatureVerifier
         {
             if (certificate == null)
             {
-                return "No certificate found";
+                return "";
             }
             StringBuilder sb = new StringBuilder("Certificate: Subject ");
             sb.Append(certificate.Subject);
