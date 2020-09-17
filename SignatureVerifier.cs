@@ -20,17 +20,6 @@ namespace PrescriptionSignatureVerifier
 
         private readonly List<Verification> jobs = new List<Verification>();
 
-        // TODO:
-        // This now works for unwrapped prescriptions (i.e. just the XML) and it seems to do so for unwrapped release
-        // responses containing a single prescription.
-        // Need to:
-        // 1. Provide an unwrapper. That is, instead of reading into prescriptionXml read into a file content string and
-        // then get prescriptionXml out of that.
-        // 2. prescriptionXml needs to be an array or a list of strings to handle the nominated release response case with more
-        // than one prescription
-        // 
-        // Don't just use strings - make a validation request to carry the extracted prescription and the results
-
         internal SignatureVerifier(string rxfile)
         {
             fileName = rxfile;
