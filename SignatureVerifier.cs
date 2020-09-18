@@ -53,7 +53,9 @@ namespace PrescriptionSignatureVerifier
                 sb.Append(v.Certdetails);
                 sb.Append("RxID: ");
                 sb.Append(v.Id);
-                sb.Append(" Result: ");
+                sb.Append(" Signature digest: ");
+                sb.Append(v.GetSignatureHashAlgorithm());
+                sb.Append("\r\nResult: ");
                 sb.Append(v.Result);
                 sb.Append("\r\n-------------------\r\n");
             }

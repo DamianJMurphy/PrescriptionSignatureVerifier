@@ -41,6 +41,15 @@ namespace PrescriptionSignatureVerifier
             filename = f;
         }
 
+        internal string GetSignatureHashAlgorithm()
+        {
+            if (hasSHA256Hash)
+            {
+                return "http://www.w3.org/2001/04/xmlenc#sha256";
+            }
+            return "http://www.w3.org/2000/09/xmldsig#sha1";
+        }
+
         internal bool CanProceed() { return (id != null) && (certificate != null); }
         public string Certdetails => certdetails;
         public string Id => id;
